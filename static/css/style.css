@@ -1,0 +1,153 @@
+/* Modern dark theme styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.blog {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+.intro-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.avatar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.avatar-placeholder {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    /* background-color: #2a2a2a; */
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+}
+
+.content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #a0a0a0;
+    margin: 0 0 2rem 0;
+}
+
+.bio {
+    max-width: 800px;
+}
+
+.tagline {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.description,
+.activities {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d0d0d0;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 2rem 1rem;
+    }
+
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .description,
+    .activities {
+        font-size: .81rem;
+    }
+}
+
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-link:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Individual hover colors for each platform */
+.social-link[href*="github"]:hover {
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.social-link[href*="linkedin"]:hover {
+    background-color: #0077b5;
+}
+
+.social-link[href*="twitter"]:hover {
+    background-color: #1da1f2;
+}
+
+.social-link[href*="mailto"]:hover {
+    background-color: #ea4335;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-link svg {
+        width: 20px;
+        height: 20px;
+    }
+}
