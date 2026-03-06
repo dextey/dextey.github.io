@@ -1,10 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Color Palette */
+:root {
+    --color-light: #EFF2F9;
+    --color-soft: #E4EBF1;
+    --color-mid: #B5BFC6;
+    --color-slate: #6E7F8D;
+    --color-dark: #161B1D;
+    --color-white: #FAFBFF;
+    --color-accent: #FFB473;
+}
+
 /* Modern dark theme styling */
 body {
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
-    color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-mid);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+
+
+.container {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.grid-pattern {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image:
+        repeating-linear-gradient(to right,
+            var(--color-soft) 0px,
+            var(--color-soft) 1px,
+            transparent 0px,
+            transparent 100px),
+        repeating-linear-gradient(to bottom,
+            var(--color-soft) 0px,
+            var(--color-soft) 1px,
+            transparent 1px,
+            transparent 100px);
+
+}
+
+marquee {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    /* background-color: var(--color-light); */
+    color: var(--color-slate);
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.12em;
+    padding: 10px 0;
+    z-index: -1000;
+}
+
+.left-block-line {
+    position: absolute;
+    z-index: 1000;
+    width: 1.5rem;
+    left: 55px;
+    height: 80%;
+    background-color: var(--color-mid);
+
+}
+
+.left-line {
+    position: absolute;
+    z-index: 1000;
+    width: .1rem;
+    left: 100px;
+    height: 70%;
+    background-color: var(--color-mid);
+
+}
+
+.brick-sm {
+    position: absolute;
+    z-index: 1000;
+    width: 3rem;
+    top: 23%;
+    left: 30px;
+    height: 1.4rem;
+    background-color: var(--color-slate);
+
+}
+
+.info {
+
+    position: absolute;
+    left: 200px;
+    top: 28.5%;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-slate);
+}
+
+.greet {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.user {
+    letter-spacing: -15%;
+    word-spacing: .3cm;
+    padding-top: .5rem;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.known {
+    color: var(--color-mid);
+    letter-spacing: 10%;
+    word-spacing: .1cm;
+    padding-top: 3.6rem;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.bracket {
+    position: absolute;
+    left: 450px;
+    top: 55%;
+
+
+}
+
+.details {
+    position: absolute;
+    width: 21.5rem;
+
+    top: 69%;
+    left: 7%;
+    letter-spacing: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+
+    color: var(--color-mid);
+    font-size: .9rem;
+}
+
+.details .name-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.details .role {
+    width: 100%;
+    font-size: .7rem;
+    letter-spacing: 10%;
+}
+
+.details .desc {
+    font-weight: lighter;
+    width: 100%;
+    font-size: .8rem;
+    letter-spacing: 10%;
+}
+
+.details img {
+    position: absolute;
+    top: -4rem;
+    left: 3rem;
 }
 
 .blog {
