@@ -10,52 +10,8 @@
   <body>
     <div class="container">
       <div class="grid-pattern">
-        <section id="main">
-          <div class="gm-left">
-            <span class="left-block-line"></span>
-            <span class="left-line"></span>
-            <span class="brick-sm"></span>
-          </div>
-
-          <div class="info">
-            <span class="greet">hi .</span>
-            <span class="user">i'm dextey</span>
-            <span class="known">
-              a web &lt;developer/&gt; / [computer engineer]
-            </span>
-          </div>
-
-          <div class="about">
-            <span class="details">
-              <div>
-                <div>hi,</div>
-                <div class="name-wrap">
-                  <img src="static/svg/loop.svg" alt="loop" />
-                  <div>a.k.a<span id="rel_name"> sayanth azhikodan </span></div>
-                </div>
-              </div>
-              <div class="role">[FULL STACK DEVELOPER & CLOUD ARCHITECT]</div>
-              <div class="desc">
-                specialized in web systems, networking, design, and
-                security.Focused on building scalable, reliable, and
-                high-performance solutions.
-              </div>
-            </span>
-            <img
-              class="bracket"
-              src="static/svg/abt_brac.svg"
-              alt="about bracket"
-            />
-          </div>
-        </section>
-
-        <marquee behavior="" direction="left">
-          INTERFACE LAYER_07 FRONT_END_ENGINEERING DOM_STRUCTURE LINUX_KERNEL
-          ROOT FILESYSTEM SHELL ENVIRONMENT NETWORKING PROTOCOL TOPOLOGY
-          PACKET_FLOW NODE GATEWAY HARDWARE ARCHITECTURE ASSEMBLY CIRCUITRY
-          COMPONENT PHYSICAL_LAYER GENERAL WORK SYSTEMS_INDEX DEPLOYMENTS
-          MODULES VERSION_CONTROL
-        </marquee>
+        <canvas id="grid-canvas"></canvas>
+        {{template "main" .}} {{template "skills" .}}
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
