@@ -45,6 +45,84 @@ body {
     justify-content: space-between;
 }
 
+
+
+.pro_hero {
+    background-color: rgba(255, 246, 194, 0.333);
+    display: flex;
+
+}
+
+
+info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2; */
+
+}
+
+.user_info {
+    padding-left: 4rem;
+}
+
+.greet {
+    font-size: 2rem;
+}
+
+.user {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -1.5vh;
+    color: var(--color-slate)
+}
+
+.known {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+
+.pro_img {
+    width: 39.2vw;
+    height: 59.9vh;
+    flex-shrink: 0;
+    background-color: var(--color-white);
+    position: relative;
+}
+
+.pro_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.img_overlay {
+    height: 3rem;
+    width: 11rem;
+    background-color: var(--color-slate);
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+}
+
+.sign {
+    position: absolute;
+    top: 22.5rem;
+    font-weight: 500;
+    font-family: "Smooch", cursive;
+    font-size: 9rem;
+    left: 4.5rem;
+    rotate: -20deg;
+    color: var(--color-dark);
+}
+
+.sign_loop {
+    position: absolute;
+    top: 22rem;
+}
+
 .trapi {
     display: flex;
     align-items: end;
