@@ -410,9 +410,9 @@ bsSlides.forEach((slide, i) => {
 
 // Wipe transitions: each defines which slide reveals and at what progress range
 const bsTransitions = [
-  { slide: 1, start: 0.08, end: 0.30 },
-  { slide: 2, start: 0.38, end: 0.60 },
-  { slide: 3, start: 0.68, end: 0.90 },
+  { slide: 1, start: 0.08, end: 0.3 },
+  { slide: 2, start: 0.38, end: 0.6 },
+  { slide: 3, start: 0.68, end: 0.9 },
 ];
 
 const bsCounterColors = ["#ffffff", "#0f1c6b", "#1a1a1a", "#e6edf3"];
@@ -452,8 +452,8 @@ ScrollTrigger.create({
     bsCounter.style.color = bsCounterColors[activeSlide];
 
     // Slide endnode up from bottom after last slide (p 0.90 → 1.0)
-    if (p >= 0.90) {
-      const endSlide = (p - 0.90) / 0.10;
+    if (p >= 0.9) {
+      const endSlide = (p - 0.9) / 0.1;
       endnodeEl.style.transform = `translateY(${VH * (1 - endSlide)}px)`;
     } else {
       endnodeEl.style.transform = `translateY(${VH}px)`;
