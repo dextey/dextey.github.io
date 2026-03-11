@@ -11,10 +11,14 @@
     <div class="container">
       <div class="grid-pattern">
         <canvas id="grid-canvas"></canvas>
-        {{template "main" .}} {{template "skills" .}}
       </div>
+      {{template "main" .}} {{template "forge" .}} {{template "buildstack" .}}
     </div>
+    <div class="bs-space"></div>
+    {{template "endnode" .}}
+    <div class="trapi_2"></div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script type="module" src="/static/js/app.js"></script>
     <script type="module" src="/static/js/log.js"></script>
   </body>

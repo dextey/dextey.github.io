@@ -1,18 +1,46 @@
 package router
 
 import (
-	"fmt"
+	"html/template"
 	"net/http"
-	"os"
 )
 
-func NewRouter() *http.ServeMux {
+func parseTemplate(base string, partials ...string) (*template.Template, error) {
+	files := append([]string{base}, partials...)
+	return template.ParseFiles(files...)
+}
 
+func NewRouter() *http.ServeMux {
 	router := http.NewServeMux()
 
 	router.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		bytes, _ := os.ReadFile("index.html")
-		fmt.Fprintf(w, "%s", string(bytes))
+		tmpl, err := parseTemplate(
+			"index.html",
+			"sections/main.html",
+			"sections/forge.html",
+			"sections/buildstack.html",
+			"sections/endnode.html",
+		)
+
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		tmpl.ExecuteTemplate(w, "index.html", nil)
+	})
+
+	router.HandleFunc("GET /test", func(w http.ResponseWriter, r *http.Request) {
+		tmpl, err := parseTemplate("test.html")
+
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		tmpl.ExecuteTemplate(w, "test.html", nil)
 	})
 
 	return router
