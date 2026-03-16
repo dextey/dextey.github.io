@@ -78,7 +78,22 @@ function startUI() {
     b: 241,
     duration: 0.5,
     ease: "power2.out",
-    onComplete: () => gsap.ticker.remove(drawGrid),
+    onComplete: () => {
+      gsap.ticker.remove(drawGrid);
+      gsap.fromTo(
+        [
+          ".page_1 .poly_1",
+          ".page_1 .pro_img",
+          ".page_1 .greet",
+          ".page_1 .user",
+          ".page_1 .known",
+          ".page_1 .about",
+          ".page_1 .b_footer",
+        ],
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "power2.out" }
+      );
+    },
   });
 }
 
