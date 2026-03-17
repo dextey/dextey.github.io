@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+
+/* Color Palette */
+:root {
+    --color-light: #EFF2F9;
+    --color-soft: #E4EBF1;
+    --color-mid: #B5BFC6;
+    --color-slate: #6E7F8D;
+    --color-dark: #161B1D;
+    --color-white: #FAFBFF;
+    --color-accent: #FFB473;
+
+    /* Grid unit — drives both canvas spacing and element positions */
+    --grid: 100px;
+}
+
+/* Modern dark theme styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white);
+    color: var(--color-mid);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+
+
+.container {
+    position: relative;
+    width: 100vw;
+    pointer-events: none;
+}
+
+.grid-pattern {
+    width: 100%;
+    position: relative;
+}
+
+#main {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+#prop_2 {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+#grid-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+marquee {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    /* background-color: var(--color-light); */
+    color: var(--color-slate);
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.12em;
+    padding: 10px 0;
+    z-index: -1000;
+}
+
+.head_a {
+    display: flex;
+
+    padding-inline: 8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog_dump {
+    top: calc(0.7 * var(--grid));
+    left: calc(2 * var(--grid));
+    font-size: 1.2rem;
+}
+
+.trapi_1 {
+    display: flex;
+    margin-left: 4rem;
+    padding-left: 6rem;
+    position: relative;
+    /* background-color: red; */
+    /* height: 100rem; */
+}
+
+.trapi_2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #161B1D;
+    clip-path: none;
+    /* set by JS on load to match .trapi_1 position */
+    pointer-events: none;
+    z-index: 10;
+}
+
+.head_a>.cords {
+    gap: 7rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+
+    color: var(--color-mid);
+}
+
+.pro_hero {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 7rem;
+
+}
+
+.pro_img {
+    width: 39.2vw;
+    height: 59.9vh;
+    flex-shrink: 0;
+    background-color: var(--color-white);
+    position: relative;
+}
+
+.pro_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.img_overlay {
+    height: 3rem;
+    width: 11rem;
+    background-color: var(--color-slate);
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+}
+
+/* .signature {
+    position: absolute;
+   
+    
+} */
+
+.sign {
+    position: absolute;
+    top: 22.5rem;
+    font-weight: 500;
+    font-family: "Smooch", cursive;
+    font-size: 9rem;
+    left: 4.5rem;
+    rotate: -20deg;
+    color: var(--color-dark);
+}
+
+.sign_loop {
+    position: absolute;
+    top: 22rem;
+}
+
+.info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2; */
+
+}
+
+.user_info {
+    padding-left: 4rem;
+}
+
+.greet {
+    font-size: 2rem;
+}
+
+.user {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -1.5vh;
+    color: var(--color-slate)
+}
+
+.known {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+
+
+
+.about {
+    margin-top: 7rem;
+    display: flex;
+
+}
+
+.rel {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.ref_details {
+    display: flex;
+}
+
+.name-wrap {
+    position: relative;
+}
+
+.rel_name {
+    font-size: 1.2rem;
+}
+
+.loop {
+    /* background: #000; */
+    top: -2rem;
+    left: -1rem;
+    position: absolute;
+}
+
+.role {
+    font-size: small;
+    font-weight: 100;
+    margin-top: 1rem;
+}
+
+.desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.desc_detail {
+    font-weight: 100;
+    font-size: .9rem;
+    width: 40%;
+}
+
+.detail_bracket {
+    /* background: var(--color-slate); */
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+}
+
+.bracket {
+    position: absolute;
+    top: -6rem;
+    right: 10rem;
+}
+
+
+.left-block-line {
+    position: absolute;
+    z-index: 1000;
+    width: calc(0.15 * var(--grid));
+    left: calc(0.55 * var(--grid));
+    height: 20%;
+    background-color: var(--color-mid);
+}
+
+.left-line {
+    position: absolute;
+    z-index: 1000;
+    width: .1rem;
+    left: var(--grid);
+    height: 15%;
+    background-color: var(--color-mid);
+}
+
+.brick-sm {
+    position: absolute;
+    z-index: 1000;
+    width: calc(0.3 * var(--grid));
+    top: 10%;
+    left: calc(0.3 * var(--grid));
+    height: calc(0.14 * var(--grid));
+    background-color: var(--color-slate);
+}
+
+
+.b_footer {
+    bottom: 0;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    margin-top: 1rem;
+}
+
+.sec_footer {
+    flex: 1;
+    padding-inline: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 100;
+}
+
+.sta_2 {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    font-weight: 100;
+    margin-right: 1rem;
+}
+
+.gm-right {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+}
+
+.rl_line {
+    position: absolute;
+    width: 1px;
+    left: -2rem;
+    height: 200rem;
+    top: -100rem;
+
+    background-color: var(--color-slate);
+}
+
+.rl_proto {
+    position: absolute;
+    width: max-content;
+    rotate: -90deg;
+    left: -4rem;
+    top: -1.5rem;
+    font-weight: 100;
+    font-size: .8rem;
+
+}
+
+
+/* Grid-unit breakpoints — shrink --grid so canvas + elements scale together */
+@media (max-width: 1280px) {
+    :root {
+        --grid: 80px;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --grid: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --grid: 44px;
+    }
+}
+
+/* ── Tablet (≤ 1024px) ─────────────────────────────────── */
+@media (max-width: 1024px) {
+    .head_a {
+        padding-inline: 4rem;
+    }
+
+    .trapi_1 {
+        margin-left: 1rem;
+        padding-left: 2rem;
+    }
+
+    .head_a>.cords {
+        gap: 3rem;
+    }
+
+    .pro_hero {
+        padding-inline: 4rem;
+        gap: 2rem;
+    }
+
+    .pro_img {
+        width: 44vw;
+        height: 52vh;
+    }
+
+    .user {
+        font-size: 4rem;
+    }
+
+    .about {
+        margin-top: 4rem;
+    }
+
+    .bracket {
+        right: 4rem;
+    }
+}
+
+/* ── Small tablet / large phone (≤ 768px) ──────────────── */
+@media (max-width: 768px) {
+    .head_a {
+        padding-inline: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .trapi_1 {
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+
+    .head_a>.cords {
+        gap: 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .pro_hero {
+        flex-direction: column;
+        padding-inline: 1.5rem;
+        gap: 2rem;
+    }
+
+    .pro_img {
+        width: 100%;
+        height: 45vh;
+        flex-shrink: unset;
+    }
+
+    .user_info {
+        padding-left: 1rem;
+    }
+
+    .user {
+        font-size: 3rem;
+        letter-spacing: -0.5vh;
+    }
+
+    .greet {
+        font-size: 1.5rem;
+    }
+
+    .known {
+        font-size: 1rem;
+    }
+
+    .about {
+        margin-top: 2rem;
+    }
+
+    .desc_detail {
+        width: 100%;
+    }
+
+    .bracket {
+        display: none;
+    }
+
+    .sign {
+        font-size: 6rem;
+        top: 14rem;
+        left: 2rem;
+    }
+
+    .sign_loop {
+        top: 14rem;
+    }
+
+    .b_footer {
+        flex-wrap: wrap;
+    }
+
+    .sec_footer {
+        padding-inline: 1rem;
+    }
+}
+
+/* ── Phone (≤ 480px) ────────────────────────────────────── */
+@media (max-width: 480px) {
+    .head_a {
+        padding-inline: 1rem;
+    }
+
+    .trapi_svg {
+        width: 200px;
+        height: 131px;
+    }
+
+    .pro_hero {
+        padding-inline: 1rem;
+    }
+
+    .user {
+        font-size: 2.2rem;
+    }
+
+    .greet {
+        font-size: 1.2rem;
+    }
+
+    .pro_img {
+        height: 38vh;
+    }
+
+    .about {
+        margin-top: 1.5rem;
+    }
+
+    .gm-right {
+        display: none;
+    }
+}

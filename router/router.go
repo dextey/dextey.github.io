@@ -18,7 +18,6 @@ func NewRouter() *http.ServeMux {
 			"index.html",
 			"sections/main.html",
 			"sections/forge.html",
-			"sections/buildstack.html",
 			"sections/endnode.html",
 		)
 
