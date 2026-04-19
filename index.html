@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>dextey</title>
+    <meta
+      name="description"
+      content="dextey — full-stack developer &amp; cloud architect. Bangalore, IN. dump of dev."
+    />
+    <link rel="stylesheet" href="/static/css/fonts.css" />
+    <link rel="stylesheet" href="/static/css/portfolio.css" />
+    <link rel="stylesheet" href="/static/css/narrative.css" />
+    <script src="/static/js/gsap.min.js"></script>
+    <script src="/static/js/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div class="blueprint" aria-hidden="true"></div>
+    <div class="wash" aria-hidden="true"></div>
+    <div class="cursor-layer" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+
+    <nav class="dock" aria-label="sections">
+      <span class="dock-liquid" aria-hidden="true"></span>
+      <a href="#intro">intro</a>
+      <a href="#built">ledger</a>
+      <a href="#work">work</a>
+      <a href="#lab">systems</a>
+      <a href="#words">words</a>
+    </nav>
+
+    <main>
+      {{template "intro" .}} {{template "ledger" .}} {{template "work" .}}
+      {{template "systems" .}} {{template "words" .}}
+    </main>
+
+    <div class="cue" aria-hidden="true"><span>scroll</span><i></i></div>
+    <script src="/static/js/narrative.js" defer></script>
+  </body>
+</html>
