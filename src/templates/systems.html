@@ -1,0 +1,36 @@
+{{define "systems" -}}
+<section class="act dark" id="lab" aria-label="systems" data-screen-label="04 systems">
+<div class="act-in">
+<div class="sect">
+<div class="wrap lab-grid">
+<div class="lab-l">
+<div class="eyebrow" data-l><span class="mono">04 / SYSTEMS</span><span class="dash"></span><span class="mono">RUNTIME</span></div>
+<h2 class="h2" data-l>it is systems,<br /><em>all the way down.</em></h2>
+<p class="lede" data-l>Under the interface: processes, packets, queues, and the logs that prove any of it happened. This is the half of the job nobody screenshots.</p>
+<div class="lab-stats" data-l>
+<div><b class="tnum">99.95%</b><span>uptime target</span></div>
+<div><b class="tnum">&lt;1.2s</b><span>lcp budget</span></div>
+<div><b class="tnum">p95 182ms</b><span>traced</span></div>
+</div>
+</div>
+<div class="lab-r" data-l>
+<div class="term">
+<div class="term-bar"><s></s><s></s><s></s><i>dextey@node — zsh</i></div>
+<pre class="term-body" id="termOut">$ </pre>
+</div>
+<svg class="diag" viewBox="0 0 440 118" role="img" aria-label="system diagram: edge, api, queue, store">
+<rect x="1" y="34" width="86" height="40" rx="2"/><text x="14" y="58">EDGE / CDN</text>
+<rect x="119" y="34" width="86" height="40" rx="2"/><text x="140" y="58">API / NODE</text>
+<rect x="237" y="34" width="86" height="40" rx="2"/><text x="252" y="58">QUEUE / JOBS</text>
+<rect x="355" y="6" width="84" height="40" rx="2"/><text x="372" y="30">MONGO</text>
+<rect x="355" y="66" width="84" height="40" rx="2"/><text x="376" y="90">REDIS</text>
+<path class="lnk" d="M87 54 H119"/><path class="lnk" d="M205 54 H237"/>
+<path class="lnk" d="M323 54 C340 54 340 26 355 26"/><path class="lnk" d="M323 54 C340 54 340 86 355 86"/>
+<circle class="node" cx="103" cy="54" r="3"/><circle class="node" cx="221" cy="54" r="3" style="animation-delay:.5s"/><circle class="node" cx="339" cy="54" r="3" style="animation-delay:1s"/>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+{{- end}}
