@@ -1,0 +1,211 @@
+{{define "ledger" -}}
+<section
+  class="act in"
+  id="built"
+  aria-label="ledger"
+  data-screen-label="02 ledger"
+>
+  <div class="act-in">
+    <div class="sect">
+      <div class="wrap">
+        <div class="eyebrow">
+          <span class="mono">02 / LEDGER</span><span class="dash"></span
+          ><span class="mono tnum">05 GROUPS · 14 ITEMS</span>
+        </div>
+        <div class="built-body">
+          <div class="built-view">
+            <div class="built-col">
+              <div class="built-head">
+                <div>
+                  <h2 class="h2">what i build,<br /><em>how i think.</em></h2>
+                  <p class="lede">
+                    A spec sheet, not a skill bar. Each line is a thing I have
+                    shipped and would ship again, grouped by the layer of the
+                    stack it lives on.
+                  </p>
+                </div>
+                <figure class="fig">
+                  <div class="fig-frame">
+                    <span class="fig-note l">136 h</span>
+                    <span class="fig-note r">a 28<br />b 16<br />c 40</span>
+                    <span class="fig-chip">NAME 132/800 mono</span>
+                    <span class="fig-chip">ROLE 34 serif italic</span>
+                    <div class="fig-strip">
+                      <div class="fig-cell"><span>01</span><i></i></div>
+                      <div class="fig-cell"><span>02</span><i></i></div>
+                      <div class="fig-cell"><span>03</span><i></i></div>
+                      <div class="fig-cell sel"><span>04</span><i></i></div>
+                      <div class="fig-cell"><span>05</span><i></i></div>
+                      <div class="fig-cell"><span>06</span><i></i></div>
+                      <div class="fig-cell"><span>07</span><i></i></div>
+                    </div>
+                    <span class="fig-note b">1240 w · 24 gutter</span>
+                  </div>
+                  <figcaption>FIG. 02 · header block · layout spec</figcaption>
+                </figure>
+              </div>
+              <div class="spec">
+                <div class="grp">
+                  <span class="mono b">[ 01 · interface ]</span
+                  ><span class="rule"></span>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Frontend engineering</div>
+                  <div class="v">react · ts · vite</div>
+                  <div class="d">
+                    Component systems that survive a redesign. State kept
+                    boring, boundaries kept obvious. <b>Six production apps.</b>
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Motion &amp; interaction</div>
+                  <div class="v">css · gsap · web anim</div>
+                  <div class="d">
+                    Transitions with a physical logic: mass, damping, and a
+                    single easing family across the whole product.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Web performance</div>
+                  <div class="v">LCP &lt; 1.2s</div>
+                  <div class="d">
+                    Budget first, features second. Critical path, image
+                    pipeline, font strategy, measured on real hardware.
+                  </div>
+                </div>
+                <div class="grp">
+                  <span class="mono b">[ 02 · service ]</span
+                  ><span class="rule"></span>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">API development</div>
+                  <div class="v">node · go · grpc</div>
+                  <div class="d">
+                    Surfaces that age well: versioned, typed end to end, and
+                    documented in the same commit as the change.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Database systems</div>
+                  <div class="v">mongodb · redis</div>
+                  <div class="d">
+                    Documents modelled around read patterns. Indexes chosen from
+                    real query plans, migrations that are reversible.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Auth &amp; security</div>
+                  <div class="v">oauth2 · oidc · jwt</div>
+                  <div class="d">
+                    Least privilege by default, secrets out of code, threat
+                    model written down before the ticket closes.
+                  </div>
+                </div>
+                <div class="grp">
+                  <span class="mono b">[ 03 · systems ]</span
+                  ><span class="rule"></span>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Linux</div>
+                  <div class="v">shell · systemd · fs</div>
+                  <div class="d">
+                    Comfortable in a bare box with no dashboard: the filesystem,
+                    the process table and the logs.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Networking</div>
+                  <div class="v">tcp/ip · dns · tls</div>
+                  <div class="d">
+                    Protocol topology and packet flow. Debugging with
+                    <b>tcpdump</b> rather than guesswork.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Hardware architecture</div>
+                  <div class="v">asm · circuitry</div>
+                  <div class="d">
+                    A computer engineer&rsquo;s mental model: the physical layer
+                    under every abstraction above it.
+                  </div>
+                </div>
+                <div class="grp">
+                  <span class="mono b">[ 04 · cloud ]</span
+                  ><span class="rule"></span>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Cloud computing</div>
+                  <div class="v">aws · cloudflare</div>
+                  <div class="d">
+                    Infrastructure described in code so nothing lives only in
+                    one person&rsquo;s memory.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Containers</div>
+                  <div class="v">docker · k8s</div>
+                  <div class="d">
+                    Reproducible images, honest health checks, resource limits
+                    set on purpose.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Distributed systems</div>
+                  <div class="v">queues · microservices</div>
+                  <div class="d">
+                    Idempotency, backpressure, retries with jitter. Assume every
+                    hop fails eventually.
+                  </div>
+                </div>
+                <div class="grp">
+                  <span class="mono b">[ 05 · delivery ]</span
+                  ><span class="rule"></span>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">CI/CD</div>
+                  <div class="v">actions · deploys</div>
+                  <div class="d">
+                    Small commits, fast pipelines, and a rollback that takes one
+                    command and no meeting.
+                  </div>
+                </div>
+                <div class="spec-row" data-fill>
+                  <div class="k">Observability</div>
+                  <div class="v">logs · traces · slo</div>
+                  <div class="d">
+                    If it is not measured it is not shipped. Alerts that page a
+                    human only when a human helps.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="built-side">
+            <figure class="ronin">
+              <img
+                src="/static/images/samurai.jpg"
+                alt="ink wash illustration of a samurai holding two swords"
+              />
+              <figcaption>
+                <span class="mono">FIG. 03 · RŌNIN</span
+                ><span class="mono">PRINCIPLED. UNDISTRACTED.</span>
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover" data-cover="1" aria-hidden="true">
+    <div class="shape"></div>
+    <svg class="shape-line" viewBox="0 0 600 200" preserveAspectRatio="none">
+      <path d="M180 0 H600 L420 200 H0 Z" />
+    </svg>
+    <div class="cover-meta">
+      <span>fill · sector 02</span><b id="fillPct">000%</b>
+    </div>
+    <div class="cover-ttl"><i>section 02</i>developer</div>
+  </div>
+</section>
+{{- end}}
